@@ -21,50 +21,105 @@
 
 ---
 
-# 👥 Team
+# 🦁 14th 아기사자
 
 <div align="center">
 
 <table>
 <tr>
 
-<td align="center" width="200">
-
-<img src="https://github.com/mi-noong.png" width="120"/>
-
-### 김민영
- 
-
-<a href="https://github.com/mi-noong">
-<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
-</a>
-
-</td>
-
-<td align="center" width="200">
-
-<img src="https://github.com/username.png" width="120"/>
-
-### 팀원 이름
-
-
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>김승언</b><br/>
 <a href="https://github.com/username">
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
 </a>
-
 </td>
 
-<td align="center" width="200">
-
-<img src="https://github.com/username.png" width="120"/>
-
-### 팀원 이름
-
-
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>김형진</b><br/>
 <a href="https://github.com/username">
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
 </a>
+</td>
 
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>박민경</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>박주원</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>배은빈</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>신진호</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>안혜선</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>양채현</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>최율도</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
+</td>
+
+<td align="center" width="180">
+<img src="https://github.com/username.png" width="100"/>
+<br/>
+<b>허은성</b><br/>
+<a href="https://github.com/username">
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
+</a>
 </td>
 
 </tr>
@@ -93,7 +148,7 @@
 
 | Week | Assignment |
 |-----|-----|
-| 1 | PBL 1&2 |
+| 1 | PBL 1&2주차 |
 | 2 |  |
 | 3 |  |
 | 4 |  |
