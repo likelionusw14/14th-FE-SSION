@@ -171,11 +171,10 @@
 
 ### 과제 제출 방법
 <p>
-  <a href="https://www.notion.so/327ab5205e988048bdb0feb0e36215db">
+  <a href="https://www.notion.so/327ab5205e988048bdb0feb0e36215db" target="_blank">
     <img src="https://img.shields.io/badge/과제%20제출%20방법%20확인-000000?style=for-the-badge&logo=notion&logoColor=white"/>
   </a>
 </p>
-
 
 
 
