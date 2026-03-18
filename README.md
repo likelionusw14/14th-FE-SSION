@@ -162,6 +162,7 @@
 # 📌 GitHub Rules
 
 ### 폴더 구조&이름 규칙
+<img width="342" height="95" alt="image" src="https://github.com/user-attachments/assets/6894b0dc-8386-4d0e-86bd-c2b3182c26e7" /> <br>
 📂 최상위 폴더 : "week{N}" <br>
 📂 하위 폴더 : "본인 이름" 
 
