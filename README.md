@@ -133,7 +133,7 @@
 
 | Week | Topic | Content |
 |-----|-----|-----|
-| 1 | 공통 세션 | Git, GitHub, Figma |
+| 1 | 공통 세션 | Git, GitHub |
 | 2 | HTML&CSS | HTML 기본 구조, CSS 선택자 |
 | 3 | JavaScript 기초 | 변수, 데이터 타입, 조건문, 반복문, 함수 |
 | 4 | JavaScript 비동기&데이터 | DOM, 이벤트 처리, fetch API |
