@@ -87,7 +87,7 @@
 </td>
 
 <td align="center" width="180">
-<img src="https://github.com/hyesun.png" width="100"/>
+<img src="https://github.com/nahuesyn.png" width="100"/>
 <br/>
 <b>안혜선</b><br/>
 <a href="https://github.com/nahuesyn">
