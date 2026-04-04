@@ -19,6 +19,7 @@
 }
 
 .my-card {
+    position: relative;
     background: white;
     border-radius: 25px;
     overflow: hidden;
@@ -27,6 +28,7 @@
 }
 
 .card {
+    position: relative;
     background: white;
     border-radius: 25px;
     overflow: hidden;
@@ -44,7 +46,7 @@
     background: white;
     border-radius: 25px;
     overflow: hidden;
-    margin-top: 10px;
+    margin: 20px 20px;
     padding: 8px;
     box-shadow: 2px 2px 2px #000000;
     text-align: left;
@@ -52,7 +54,6 @@
 
 .Details-card-body{
     padding: 8px;
-    width: 100%;
     box-sizing: border-box;
 }
 
@@ -65,6 +66,16 @@ img{
     height: 300px;
     position: relative;
 }
+
+.text{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    padding: 1px 1px;
+    border-radius: 5px;
+}
+
 h2{
     margin: 0;
     line-height: 1.4;
