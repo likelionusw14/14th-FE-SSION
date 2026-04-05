@@ -1,6 +1,4 @@
-/* =====================
-   Reset / 기본 설정
-===================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,9 +18,7 @@ img {
   max-width: 100%;
 }
 
-/* =====================
-   전체 레이아웃
-===================== */
+/*   전체 레이아웃*/
 .layout {
   max-width: 900px;
   margin: 0 auto;
@@ -32,9 +28,7 @@ img {
   gap: 40px;
 }
 
-/* =====================
-   상단 요약 카드
-===================== */
+/*   상단 요약 카드*/
 .Self-introduction {
   background-color: #ffffff;
   border-radius: 16px;
@@ -71,9 +65,7 @@ img {
   color: #444;
 }
 
-/* =====================
-   하단 상세 카드
-===================== */
+/*   하단 상세 카드*/
 .introduction {
   background-color: #ffffff;
   border-radius: 16px;
@@ -109,9 +101,7 @@ img {
   color: #444;
 }
 
-/* =====================
-   리스트 영역
-===================== */
+/*   리스트 영역*/
 .introduction ul {
   margin: 8px 0 16px 20px;
 }
@@ -119,17 +109,4 @@ img {
 .introduction li {
   font-size: 0.9rem;
   margin-bottom: 6px;
-}
-
-/* =====================
-   반응형 (모바일)
-===================== */
-@media (max-width: 600px) {
-  .layout {
-    padding: 20px 12px;
-  }
-
-  .Self-introduction img {
-    width: 140px;
-  }
 }
