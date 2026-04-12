@@ -8,7 +8,7 @@ let allBtn = document.querySelector("#all");
 let doneBtn = document.querySelector("#done");
 let notDoneBtn = document.querySelector("#notDone");
 
-//let delBtn = document.querySelector("#delBtn");
+let delBtn = document.querySelector("#delBtn");
 let completeAllBtn = document.querySelector("#completeAll");
 
 let todos = [];
@@ -41,6 +41,7 @@ notDoneBtn.addEventListener("click", () => {
     updateButtonStatus(notDoneBtn);
     render();
 });
+
 
 function addTodo() {
 
@@ -95,7 +96,17 @@ function render() {
             Textspan.classList.add("done");
         } //html의 속성을 변경
         
-        li.append(check, Textspan);
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "X";
+
+        // 삭제 버튼 클릭 이벤트 추가
+        deleteBtn.addEventListener("click", (e) => {  //e는 event객체, 클릭된 위치, 클릭된 요소 등 클릭 사건에 대한 모든 정보가 담겨 있는 '사건 보고서'
+        e.stopPropagation();    //이건 같이 클릭되는 거 방지, 눌렀을때 완료 처리되는 거 방지하고, 삭제 버튼만 눌리도록
+        todos = todos.filter(t => t !== todo);      //클릭한 것만 배열에서 제외하고 아닌 것들만 새 배열에 남기고 새로운 배열 생성
+        render(); // 배열이 바뀌었으니 다시 그리기
+        });
+
+        li.append(check, Textspan, deleteBtn);
         list.appendChild(li); 
     });
 
@@ -120,4 +131,3 @@ function updateButtonStatus(clickedBtn) {
         }
     });
 }
-
