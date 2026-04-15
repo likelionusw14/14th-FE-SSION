@@ -1,0 +1,118 @@
+/* 공통 레이아웃 */
+body {
+    background-color: #f0f2f5;
+    margin: 0;
+    font-family: 'Pretendard', sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-header {
+    margin: 40px 0 20px;
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 60px 0;
+}
+
+/* --- [요약 카드 그리드] --- */
+/* 기본 설정 (모바일: 가장 작은 화면) */
+.summary-grid {
+    display: grid;
+    gap: 20px;
+    /* 기본적으로 1열로 보여줍니다 */
+    grid-template-columns: 1fr; 
+}
+
+/* 태블릿/중간 화면 (가로 폭 600px 이상일 때) */
+@media (min-width: 600px) {
+    .summary-grid {
+        /* 2열로 변경 */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* 데스크톱 화면 (가로 폭 1024px 이상일 때) */
+@media (min-width: 1024px) {
+    .summary-grid {
+        /* 3열로 변경 (3x3 대시보드) */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+.summary-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+/* 내 카드 강조 효과 */
+.summary-card.highlight {
+    border: 3px solid #007bff;
+    transform: translateY(-10px); /* 살짝 떠 있는 효과 */
+    box-shadow: 0 15px 30px rgba(0,123,255,0.2);
+}
+
+/* 이미지 배지 오버레이 */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.profile-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 123, 255, 0.9);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-content { padding: 20px; }
+.card-content h1 { font-size: 1.3rem; margin: 0 0 5px; }
+.part-tag { color: #007bff; font-weight: bold; margin-bottom: 10px; }
+.one-liner { color: #666; font-size: 0.95rem; }
+
+/* --- [상세 목록 영역] --- */
+.detail-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.detail-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-header h1 { margin: 0; font-size: 1.8rem; }
+.sub-info { color: #007bff; font-weight: bold; margin-bottom: 20px; }
+.sub-info span { color: #888; }
+
+.info-group { margin-bottom: 20px; }
+.info-group h3 { font-size: 1rem; color: #555; margin-bottom: 8px; }
+.tech-list { padding-left: 20px; }
+.quote { font-style: italic; color: #444; border-left: 3px solid #ddd; padding-left: 10px; }
