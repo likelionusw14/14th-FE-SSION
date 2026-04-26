@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>🦁 멋사 출석부</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🦁 멋사 출석부</h1>
+      <div class="stats">
+        출석 <span id="present-count">0</span> / 전체 <span id="total-count">0</span>명
+      </div>
+    </header>
+
+    <div class="add-form">
+      <input id="name-input" placeholder="새 멤버 이름을 입력하세요" />
+      <button id="add-btn">추가</button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="present">출석</button>
+      <button class="filter-btn" data-filter="absent">결석</button>
+    </div>
+
+    <ul id="member-list"></ul>
+  </div>
+
+  <script src="stage-1.js"></script>
+</body>
+</html>
