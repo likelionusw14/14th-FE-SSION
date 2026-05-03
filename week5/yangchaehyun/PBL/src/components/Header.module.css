@@ -1,0 +1,41 @@
+.bgColor{
+    background-color: #cac3c3e2;
+}
+
+.controls {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.apiControls, .viewOptions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.statusReady { color: #28a745; font-weight: bold; }
+
+.button{
+    /* background: white; */
+    padding: 1px 1px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #000000;
+}
+
+.retryBtn {
+    margin-left: 10px;
+    cursor: pointer;
+    background: #ff4444;
+    /* color: white; */
+    border: none;
+    border-radius: 4px;
+}

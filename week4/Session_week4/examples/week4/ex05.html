@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>문제 5</title>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #F8FAFC;
+      color: #1E293B;
+    }
+    h1 { color: #F59E0B; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: white;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      font-size: 1.1rem;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s;
+    }
+    li:hover { background: #FEF3C7; }
+    button {background:rgb(251, 198, 85); border-radius: 5px;}
+  </style>
+</head>
+<body>
+  <h1>문제 5. 클릭하면 출석 토글</h1>
+  <button id="total">전체</button>
+  <button id="btnpresent">출석</button>
+  <ul id="member-list"></ul>
+  <script>
+    const members = [
+      { id: 1, name: '김사자', present: false },
+      { id: 2, name: '이사자', present: true },
+      { id: 3, name: '박사자', present: false },
+    ];
+
+    const listEl = document.getElementById('member-list');
+
+    function render() {
+      listEl.innerHTML = '';
+      members.forEach((member) => {
+        const li = document.createElement('li');
+        // 출석이면 ✅, 결석이면 ⬜ 표시 (삼항 연산자)
+        li.textContent = `${member.name} ${member.present ? '✅' : '⬜'}`;
+        
+        li.addEventListener('click', () => {
+          // 1)
+          member.present = !member.present;   //java는 != 아니고 =!이거다.
+          // 2)
+          render();
+        });
+        
+        listEl.appendChild(li);
+      });
+    }
+
+    render();
+
+    /* 선택:
+      "출석한 사람만 보기" 버튼 추가
+      members.filter(m => m.present)로 골라낸 배열을 그리기
+    */ //집가서 구현해보기
+    
+  </script>
+</body>
+</html>
