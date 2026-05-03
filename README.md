@@ -87,10 +87,10 @@
 </td>
 
 <td align="center" width="180">
-<img src="https://github.com/hyesun.png" width="100"/>
+<img src="https://github.com/nahuesyn.png" width="100"/>
 <br/>
 <b>안혜선</b><br/>
-<a href="https://github.com/hyesun">
+<a href="https://github.com/nahuesyn">
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/>
 </a>
 </td>
@@ -148,9 +148,9 @@
 
 | Week | Assignment |
 |-----|-----|
-| 1 | PBL 1&2주차 |
-| 2 |  |
-| 3 |  |
+| 1 | VS Code 설치 및 환경설정 |
+| 2 | PBL과제 (1,2,3주차) & TIL과제 (HTML&CSS)|
+| 3 | PBL과제 (4주차) & TIL과제 (JS 기초) & 세션과제 (Todo list 삭제기능 추가) |
 | 4 |  |
 | 5 |  |
 | 6 |  |
@@ -169,6 +169,12 @@
 <br>
 <br>
 
+### 🔀 Branches
+**main branch** → 아기사자 과제 제출 branch <br>
+**session branch** → 정기세션 자료 공간 branch
+
+<br>
+
 ### :white_check_mark: 과제 제출 방법
 <p>
   <a href="https://www.notion.so/327ab5205e988048bdb0feb0e36215db" target="_blank">
@@ -180,6 +186,7 @@
 ### ⚠️ 주의 사항
 - 항상 본인 이름의 브랜치에서만 작업한다.
 - Merge 하지 않는다.
+- PR 메시지 형식 : [이름/PBL or Session] week{N} 과제 제출
 - 과제 제출에 어려움이 있는 경우 운영진에게 바로 문의한다!!
 
 <br>
