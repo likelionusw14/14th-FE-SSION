@@ -5,7 +5,7 @@
 function StudentCard({ }) {
 
   // TODO: present 가 true면 'present', false면 '' 이 되도록 고쳐보세요.
-  const cardClass = ''
+  const cardClass = 
 
   return (
     // TODO: className 에 cardClass 를 넣어보세요.
