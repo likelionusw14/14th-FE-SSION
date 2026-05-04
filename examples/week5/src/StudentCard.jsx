@@ -9,7 +9,7 @@ function StudentCard({ }) {
 
   return (
     // TODO: className 에 cardClass 를 넣어보세요.
-    <li className={cardClass}>
+    <li >
 
       {/* TODO: name 을 화면에 표시하세요.  힌트: {name} */}
       <span>이름</span>
