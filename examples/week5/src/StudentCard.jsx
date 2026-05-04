@@ -5,7 +5,6 @@
 function StudentCard({ name, present }) {
 
   // TODO: present 가 true면 'present', false면 '' 이 되도록 고쳐보세요.
-  //       힌트: present ? 'present' : ''
   const cardClass = ''
 
   return (
@@ -16,7 +15,6 @@ function StudentCard({ name, present }) {
       <span>이름</span>
 
       {/* TODO: present 값에 따라 ✅ 또는 ⬜ 를 표시하세요.
-               힌트: {present ? '✅' : '⬜'} */}
       <span className="member-status">⬜</span>
 
     </li>
