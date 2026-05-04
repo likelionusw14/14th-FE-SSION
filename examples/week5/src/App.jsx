@@ -11,7 +11,6 @@ const members = [
 
 function App() {
   // TODO: 출석 인원 수를 계산하세요.
-  //       힌트: members.filter(m => m.present).length
   const presentCount = 0
 
   return (
@@ -27,14 +26,6 @@ function App() {
       <ul id="member-list">
         {/* TODO: members.map() 으로 StudentCard 를 렌더링하세요.
                   각 카드에 key, name, present prop 을 전달해야 합니다.
-            힌트:
-            {members.map(member => (
-              <StudentCard
-                key={member.id}
-                name={member.name}
-                present={member.present}
-              />
-            ))}
         */}
       </ul>
     </div>
