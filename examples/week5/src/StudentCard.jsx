@@ -12,10 +12,10 @@ function StudentCard({ }) {
     <li >
 
       {/* TODO: name 을 화면에 표시하세요.*/}
-      <span>이름</span>
+      <span> </span>
 
       {/* TODO: present 값에 따라 ✅ 또는 ⬜ 를 표시하세요.
-      <span className="member-status">⬜</span>
+      <span > </span>
 
     </li>
   )
