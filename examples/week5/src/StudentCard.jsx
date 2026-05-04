@@ -11,7 +11,7 @@ function StudentCard({ }) {
     // TODO: className 에 cardClass 를 넣어보세요.
     <li >
 
-      {/* TODO: name 을 화면에 표시하세요.  힌트: {name} */}
+      {/* TODO: name 을 화면에 표시하세요.*/}
       <span>이름</span>
 
       {/* TODO: present 값에 따라 ✅ 또는 ⬜ 를 표시하세요.
