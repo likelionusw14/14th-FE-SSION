@@ -2,7 +2,7 @@
 
 // TODO: props 두 개를 받도록 { } 안을 채우세요.
 //       name (이름),  present (출석 여부)
-function StudentCard({ , }) {
+function StudentCard({ }) {
 
   // TODO: present 가 true면 'present', false면 '' 이 되도록 고쳐보세요.
   const cardClass = ''
