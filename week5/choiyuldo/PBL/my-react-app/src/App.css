@@ -1,0 +1,116 @@
+/* 기본 설정 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #f5f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: left;
+}
+
+h1 { margin-bottom: 24px; }
+h2 { margin-bottom: 20px; font-size: 1.4rem; }
+
+/* 공통 버튼 */
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+button:hover { opacity: 0.8; }
+
+/* 상단 컨트롤 영역 */
+.control-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.api-controls, .local-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* API 관련 파란색 버튼 */
+.api-controls button {
+  background-color: #4a90e2;
+}
+
+/* 인원수 우측 정렬 */
+#totalCount {
+  font-weight: bold;
+  margin-left: auto;
+  font-size: 1.1rem;
+}
+
+/* 상태 표시 박스 */
+.status-display {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+}
+
+/* 필터 및 검색 */
+.view-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.view-options select, 
+.view-options input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.view-options input {
+  flex-grow: 1;
+  max-width: 400px;
+}
+
+/* 카드 그리드 레이아웃 */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
