@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>문제 2</title>
+  <style>
+    body {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #F8FAFC;
+      color: #1E293B;
+    }
+    h1 { color: #F59E0B; }
+    .hint {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #F59E0B;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    code {
+      background: #1E293B;
+      color: #F1F5F9;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>문제 2. 멤버 데이터 만들기</h1>
+  <div class="hint">
+    <strong>주제</strong>: 객체 + 배열<br />
+    <strong>할 것</strong>: 콘솔 (F12 → Console 탭) 열고 결과 확인하기
+  </div>
+
+  <p>코드 채우고, 콘솔에서 결과 확인</p>
+
+  <script>
+    // 1) 
+    const members = [
+      { id: 1, name: '김사자', present: false },
+      { id: 2, name: '강사자', present: false },
+      { id: 3, name: '최사자', present: false },
+      { id: 4, name: '양사자', present: false },
+      { id: 5, name: '아사자', present: false }
+    ];
+
+    // 2)
+    console.log('전체 인원:', members.length);
+
+    // 3)
+    console.log('첫 번째 멤버:', members[0]);
+
+    // 4)
+    console.log('두 번째 멤버:', members[1]);
+
+    // 5)
+    members.push({id: 6, name: '박사자', present: false})
+    console.log('추가 후:', members);
+
+    // 6) 선택: '김사자'라는 이름의 멤버 객체 찾기 (find 메서드)
+    const found = members.find((members) => members.name === '김사자');
+    console.log('찾은 멤버:', found);
+  </script>
+</body>
+</html>

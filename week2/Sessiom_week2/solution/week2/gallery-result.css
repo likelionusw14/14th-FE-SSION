@@ -1,0 +1,45 @@
+* {
+  /* 레이아웃 계산을 쉽게 하기 위해 사용함 
+  width와 height에 padding과 border를 포함시킴 */
+  box-sizing: border-box;
+}
+body {
+  background-color:#eee;
+  font-size:16px;
+}
+#wrapper{
+  /* 내부 요소들을 Grid(격자) 형태로 배치 */
+  display:grid;
+
+  /* 열을 자동으로 생성 
+    auto-fit: 화면 크기에 맞게 카드 개수 자동 조절
+    minmax(320px, 1fr): 최소 320px, 최대 1fr */
+  grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+
+  /* 카드 사이의 간격을 1rem로 설정 */
+  grid-gap:1rem;
+
+}
+.card {
+  background-color:#fff;
+  box-shadow:0px 1px 5px #222;
+}
+
+/* card 안에 있는 header 요소 */
+.card > header {
+  font-size:1.5rem;
+  padding:0.5rem;
+}
+
+/* card 안에 있는 p(본문 텍스트) */
+.card > p {
+  padding:0.5rem;
+  line-height:1.6em;
+}
+
+/* card 안에 있는 이미지 */
+.card > img {
+/* 이미지가 카드보다 커지지 않도록 설정
+  → 카드 너비에 맞게 자동으로 줄어듦 */
+  max-width:100%;
+}
