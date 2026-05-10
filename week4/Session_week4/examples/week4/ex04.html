@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>문제 4</title>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #F8FAFC;
+      color: #1E293B;
+    }
+    h1 { color: #F59E0B; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: white;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      font-size: 1.1rem;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      background: #1E293B;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      margin: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>문제 4. render 함수로 묶기</h1>
+  
+  <ul id="member-list"></ul>
+  <div>
+    <button id="add-btn">새 멤버 추가</button>
+    <button id="delete-btn">첫 멤버 삭제</button>
+  </div>
+
+  <script>
+    const members = [
+      { id: 1, name: '김사자', present: false },
+      { id: 2, name: '이사자', present: true },
+      { id: 3, name: '박사자', present: false },
+    ];
+
+    const listEl = document.getElementById('member-list');
+
+    function render() {
+      // 1) ListEl 비우기
+      listEl.innerHTML = "";
+      
+      // 2) members.forEach로 li 만들어서 붙이기
+      members.forEach((member) => {     //member는 파이썬의 for구문에서의 i와 비슷한 것
+        const li = document.createElement('li');  //리스트 아이템 생성
+        li.textContent = member.name;     //텍스트 채우기
+        listEl.appendChild(li);     //ul에 li붙이기, 이걸 해줌으로써 화면에서 보임
+      });
+    }
+
+    // 3) 초기 렌더링
+    render();
+    
+    document.getElementById('add-btn').addEventListener('click', () => {
+      members.push({ 
+        id: Date.now(), 
+        name: '새사자' + members.length, 
+        present: false 
+      });
+      render();
+    });
+
+    document.getElementById('delete-btn').addEventListener('click', () => {
+      members.shift(); // 첫 멤버 제거
+      render();
+    });
+
+  </script>
+</body>
+</html>

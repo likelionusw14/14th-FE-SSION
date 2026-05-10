@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>워밍업 정답 — 출석 카운터</title>
+  <style>
+    body {
+      font-family: 'Pretendard', -apple-system, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #FFF8E7;
+      color: #1E293B;
+    }
+    h1 { font-size: 2rem; margin-bottom: 2rem; }
+    #count { color: #F59E0B; font-size: 3rem; font-weight: 800; }
+    .buttons { display: flex; gap: 1rem; }
+    button {
+      padding: 0.8rem 1.6rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #1E293B;
+      color: white;
+      transition: transform 0.1s;
+    }
+    button:hover { transform: translateY(-2px); }
+    button:active { transform: translateY(0); }
+    #reset { background: #94A3B8; }
+  </style>
+</head>
+<body>
+  <h1>오늘 출석한 아기사자: <span id="count">0</span>명</h1>
+  <div class="buttons">
+    <button id="plus">출석</button>
+    <button id="reset">초기화</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const countEl = document.getElementById('count');
+    const plusBtn = document.getElementById('plus');
+    const resetBtn = document.getElementById('reset');
+
+    plusBtn.addEventListener('click', () => {
+      count = count + 1;          // 또는 count++;
+      countEl.textContent = count;
+    });
+
+    resetBtn.addEventListener('click', () => {
+      count = 0;
+      countEl.textContent = count;
+    });
+  </script>
+</body>
+</html>
