@@ -1,0 +1,178 @@
+/* 전체 배경과 간격 조절 */
+body {
+  background-color: #f0f2f5; /* 약간 밝은 회색으로 변경 */
+  margin: 0;
+  padding: 20px;
+}
+
+/* 카드 리스트 레이아웃 */
+.cardlist {
+  display: grid;
+  /* 한 줄에 3개씩 나오게 하려면 아래처럼 조절 */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 개별 카드 디자인 */
+.card {
+  background: white;
+  border-radius: 15px; /* 모서리를 더 둥글게 */
+  overflow: hidden; /* 이미지가 튀어나가지 않게 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 살짝 그림자 추가 */
+  text-align: left; /* 텍스트를 왼쪽으로 정렬 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 카드 이미지 설정 */
+.card img {
+  width: 100%; /* 카드의 너비에 맞게 */
+  height: 250px; /* 고정 높이 */
+  object-fit: cover; /* 이미지가 찌그러지지 않고 꽉 차게 */
+}
+
+/* 카드 내부 텍스트 간격 */
+.card h2, .card p {
+  padding: 0 20px; /* 좌우 여백 */
+}
+
+.card h2 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.myrole {
+  color: #82b1ff; /* 역할 글자 색상 변경 */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card p:last-child {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+form {
+  margin-bottom: 25px;
+  display: flex;       
+  align-items: center; 
+  border-bottom: 0.5px solid #c4c0c077;
+}
+
+span {
+  margin-right: 15px;
+  margin-left: 15px;  
+  font-weight: bold;   
+}
+
+select {
+  padding: 5px 20px;
+  border-radius: 5px;  
+}
+
+.search-input {
+  padding: 5px 20px;
+  width: 200px;
+}
+
+.myrole{
+  color: rgb(102, 199, 255);
+}
+
+button{
+  background-color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.baby-lion-form {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin: 70px auto 50px;
+  max-width: 1200px;
+  padding: 18px;
+  text-align: left;
+}
+
+.baby-lion-form label {
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.baby-lion-form input,
+.baby-lion-form select,
+.baby-lion-form textarea {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 12px;
+  width: 100%;
+}
+
+.baby-lion-form textarea {
+  min-height: 85px;
+  resize: vertical;
+}
+
+.baby-lion-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.baby-lion-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.baby-lion-actions button {
+  font-weight: bold;
+  padding: 10px 18px;
+}
+
+.detail {
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  
+  /* 핵심: 카드 리스트 줄에서 벗어나 중앙에 배치 */
+  grid-column: 1 / -1;
+  max-width: 990px;     
+  margin: 50px auto;     
+  
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+/* 소제목(자기소개, 연락처 등) 밑줄 */
+.detail h3 {
+  font-size: 1.1rem;
+  margin-top: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* 연락처 리스트 정렬 */
+.detail ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
