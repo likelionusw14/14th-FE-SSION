@@ -1,0 +1,96 @@
+/* =============================================
+   5주차 과제 — style.css
+   건드리지 않아도 되지만, 자유롭게 수정해도 됩니다!
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, #FEF3C7 0%, #FFEDD5 100%);
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: #1E293B;
+}
+
+/* 전체 메뉴판 */
+.menu-board {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+/* 메뉴판 제목 */
+.menu-board h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed #FCD34D;
+}
+
+/* 카테고리 제목 */
+.menu-board h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #F05A00;
+  margin: 1.5rem 0 0.75rem;
+}
+
+/* 개별 메뉴 아이템 */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #F8FAFC;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  transition: all 0.15s;
+}
+
+.menu-item:hover {
+  background: #FEF3C7;
+  border-color: #FCD34D;
+}
+
+/* 이모지 */
+.menu-emoji {
+  font-size: 1.8rem;
+  width: 2.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* 메뉴 이름 */
+.menu-name {
+  font-size: 1rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* 가격 */
+.menu-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #F05A00;
+}
+
+/* 품절 (도전 과제) */
+.menu-soldout {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #94A3B8;
+  background: #F1F5F9;
+  padding: 2px 10px;
+  border-radius: 100px;
+}
