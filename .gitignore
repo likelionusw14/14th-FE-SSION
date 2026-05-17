@@ -1,0 +1,12 @@
+# Node.js 관련
+node_modules/
+dist/
+.env
+
+# 빌드 결과물
+*.log
+*.tmp
+
+# OS 자동 생성 파일
+.DS_Store
+Thumbs.db

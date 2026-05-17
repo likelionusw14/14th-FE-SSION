@@ -1,1 +1,0 @@
-let totalCount = 9;
