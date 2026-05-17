@@ -150,7 +150,7 @@ function setupEventListeners() {
     document.querySelector('#addOneRandom').onclick = () => fetchLions(1, 'append');
     document.querySelector('#addFiveRandom').onclick = () => fetchLions(5, 'append');
     document.querySelector('#refreshAll').onclick = () => {
-        // 현재 화면에 있는 인원수만큼 새로 받아와서 교체
+        // 현재 전체 인원수만큼 새로 받아와서 교체 (양채현 포함 싹 삭제)
         fetchLions(lionData.length, 'replace');
     };
     document.querySelector('#retryBtn').onclick = () => fetchLions(lastFetchCount, 'append');
@@ -162,13 +162,20 @@ function render() {
     const detailsList = document.querySelector('#detailsList');
     const partFilter = document.querySelector('#filterPart').value;
     const sortOrder = document.querySelector('#sortOrder').value;
-    const searchName = document.querySelector('#searchInput').value.toLowerCase();
+    const searchInput = document.querySelector('#searchInput').value.toLowerCase();
 
     // [Step 1] 필터링 & 검색
     let filtered = lionData.filter(lion => {
         const isPartMatch = (partFilter === 'all' || lion.track === partFilter);
-        const isNameMatch = lion.name.toLowerCase().includes(searchName);
-        return isPartMatch && isNameMatch;
+        
+        // 일반 이름 검색
+        const isNameMatch = lion.name.toLowerCase().includes(searchInput);
+        
+        // 검색어 "ai" 입력 시 랜덤 추가된 데이터(특정 문구 포함) 검색 가능하도록 조건 추가
+        const isAiSearch = (searchInput === 'ai' && 
+            (lion.summary.includes("외부에서 온") || lion.description.includes("공부 중인 예비 개발자")));
+            
+        return isPartMatch && (isNameMatch || isAiSearch);
     });
 
     // [Step 2] 정렬
@@ -226,13 +233,13 @@ function makeDetailsCard(lion) {
         <h3>자기소개</h3>
         <b>${lion.description}</b>
         <h3>연락처</h3>
-        <ul>
+        <ul style="list-style:none; padding:0;">
             <li>Email : ${lion.email}</li>
             <li>Phone : ${lion.phone}</li>
             <li>Website : <a href="${lion.website}" target="_blank">${lion.website}</a></li>
         </ul>
         <h3>관심 기술</h3>
-        <ul>${lion.skills.map(s => `<li>${s.trim()}</li>`).join('')}</ul>
+        <ul style="list-style:none; padding:0;">${lion.skills.map(s => `<li>${s.trim()}</li>`).join('')}</ul>
         <h3>한 마디</h3>
         <b><mark>${lion.oneLiner}</mark></b>
     `;
@@ -266,9 +273,8 @@ async function fetchLions(count, mode) {
         }));
 
         if (mode === 'replace') {
-            // '내 카드(양채현)'는 보존하고 싶다면 아래와 같이 처리 가능
-            const myCard = lionData.find(l => l.name === "양채현");
-            lionData = myCard ? [myCard, ...mapped] : mapped;
+            // [수정] 양채현 카드 포함 기존 모든 데이터를 지우고 새 데이터로만 교체
+            lionData = mapped;
         } else {
             lionData = [...lionData, ...mapped];
         }
@@ -339,7 +345,6 @@ function toggleForm() {
         </form>
     `;
 
-    // 랜덤 값 채우기 (요구사항 9)
     document.querySelector('#fillRandom').onclick = async () => {
         const res = await fetch('https://randomuser.me/api/');
         const data = await res.json();
@@ -372,8 +377,32 @@ function toggleForm() {
 }
 
 function removeLastLion() {
-    if (lionData.length > 0) {
-        lionData.pop();
+    // 1. 현재 화면에 적용된 필터와 검색어 가져오기
+    const partFilter = document.querySelector('#filterPart').value;
+    const searchInput = document.querySelector('#searchInput').value.toLowerCase();
+    const sortOrder = document.querySelector('#sortOrder').value; // 정렬 상태 추가
+    
+    // 2. render 함수와 동일한 로직으로 필터링
+    let currentView = lionData.filter(lion => {
+        const isPartMatch = (partFilter === 'all' || lion.track === partFilter);
+        const isNameMatch = lion.name.toLowerCase().includes(searchInput);
+        const isAiSearch = (searchInput === 'ai' && 
+            (lion.summary.includes("외부에서 온") || lion.description.includes("공부 중인 예비 개발자")));
+        return isPartMatch && (isNameMatch || isAiSearch);
+    });
+
+    // 3. [핵심] render 함수와 동일한 로직으로 정렬 수행
+    // 이 과정을 거쳐야 "화면에 보이는 순서"와 "currentView의 순서"가 일치하게 됨
+    if (sortOrder === 'name') {
+        currentView.sort((a, b) => a.name.localeCompare(b.name));
+    } else {
+        currentView.sort((a, b) => a.id - b.id);
+    }
+
+    // 4. 화면에 보이는 것 중 가장 마지막 녀석의 ID를 찾아 제거
+    if (currentView.length > 0) {
+        const targetId = currentView[currentView.length - 1].id;
+        lionData = lionData.filter(lion => lion.id !== targetId);
         render();
     } else {
         alert("삭제할 사자가 없습니다.");
