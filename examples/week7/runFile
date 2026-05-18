@@ -1,4 +1,25 @@
+< ex01 & ex02 >
+
 npm create vite@latest practice -- --template react-ts
 cd practice
 npm install
+npm run dev
+
+---
+
+< ex03 & ex04 >
+
+# Supabase 패키지 설치
+npm install @supabase/supabase-js
+
+# .env 파일을 프로젝트 루트에 만들고
+
+VITE_SUPABASE_URL=여기에_URL
+
+VITE_SUPABASE_ANON_KEY=여기에_KEY
+
+# src/supabaseClient.ts 파일 만들고 내용 붙여넣기
+
+# src/App.tsx에 정답 코드 붙여넣기
+
 npm run dev
