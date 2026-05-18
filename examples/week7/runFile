@@ -1,0 +1,4 @@
+npm create vite@latest practice -- --template react-ts
+cd practice
+npm install
+npm run dev
