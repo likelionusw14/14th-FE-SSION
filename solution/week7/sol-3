@@ -1,0 +1,52 @@
+import { useState, useEffect } from 'react'
+import { supabase } from '../supabaseClient'
+
+interface Student {
+  id: number
+  name: string
+  is_present: boolean
+}
+
+export default function App() {
+  const [students, setStudents] = useState<Student[]>([])
+  const [inputName, setInputName] = useState<string>('')
+
+  const fetchStudents = async (): Promise<void> => {
+    const { data } = await supabase
+      .from('students').select('*').order('created_at')
+    if (data) setStudents(data)
+  }
+
+  useEffect(() => { fetchStudents() }, [])
+
+  const addStudent = async (): Promise<void> => {
+    if (inputName.trim() === '') return
+    await supabase.from('students').insert({ name: inputName, is_present: false })
+    setInputName('')
+    fetchStudents()
+  }
+
+  const togglePresent = async (s: Student): Promise<void> => {
+    await supabase.from('students')
+      .update({ is_present: !s.is_present }).eq('id', s.id)
+    fetchStudents()
+  }
+
+  return (
+    <div>
+      <h1>🦁 멋사 출석부</h1>
+      <div>
+        <input value={inputName} onChange={e => setInputName(e.target.value)} placeholder="이름 입력" />
+        <button onClick={addStudent}>추가</button>
+      </div>
+      <ul>
+        {students.map(s => (
+          <li key={s.id} onClick={() => togglePresent(s)}>
+            {s.is_present ? '✅' : '⬜'} {s.name}
+          </li>
+        ))}
+      </ul>
+      <p>출석 {students.filter(s => s.is_present).length} / 전체 {students.length}명</p>
+    </div>
+  )
+}
