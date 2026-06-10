@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아기 사자 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="control-section">
+            <div class="control-buttons">
+                <button id="toggle-form-btn">아기 사자 추가</button>
+                <button id="delete-last-btn">마지막 아기 사자 삭제</button>
+            </div>
+            <span id="total-count">총 0명</span>
+        </section>
+
+        <section id="form-section" class="hidden">
+            <form id="lion-form">
+                <div class="form-grid">
+                    <input type="text" id="name" placeholder="이름" required>
+                    <select id="part">
+                        <option value="Frontend">Frontend</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Design">Design</option>
+                    </select>
+                    <input type="text" id="tech" placeholder="관심 기술 (쉼표로 구분)" required>
+                    <input type="text" id="simpleIntro" placeholder="한 줄 소개" required>
+                    <input type="email" id="email" placeholder="이메일">
+                    <input type="text" id="phone" placeholder="전화번호">
+                    <input type="url" id="website" placeholder="웹사이트 URL">
+                    <input type="text" id="club" placeholder="동아리명" value="멋쟁이사자처럼">
+                </div>
+                <textarea id="detailIntro" placeholder="상세 자기소개"></textarea>
+                <input type="text" id="word" placeholder="한 마디">
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">추가하기</button>
+                    <button type="button" id="cancel-btn" class="cancel-btn">취소</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="summary-section">
+            <div id="summary-container" class="grid-wrapper"></div>
+        </section>
+
+        <section class="detail-section">
+            <div id="detail-container" class="detail-wrapper"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
